@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anya AI</title>
+    <style>
+       iframe{
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+       }
+       h1{
+        text-align: center;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+       }
+       img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       }
+    </style>
+</head>
+<body style="background-color: rgb(0,156,213);" >
+    <h1>Anya AI</h1>
+    <img src="anya.png" alt="Anya AI" style="display: block; margin-left: auto; margin-right: auto; width: 100px; height: 100px;">
+    <button onclick="toggleIframe()">Toggle Anya</button>
+    <iframe id="chatbotIframe" src="https://copilotstudio.microsoft.com/environments/Default-1b6bba49-6f35-4d82-9fca-4827d417cd3e/bots/crc1e_anyaAi/webchat?__version__=2" frameborder="0" style="width: 300px; height: 600px;"></iframe>
+
+    <script>
+        function toggleIframe() {
+            var iframe = document.getElementById('chatbotIframe');
+            if (iframe.style.display === 'none' || iframe.style.display === '') {
+                iframe.style.display = 'block';
+            } else {
+                iframe.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
